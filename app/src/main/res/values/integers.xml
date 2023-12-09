@@ -7,6 +7,6 @@
     <integer name="XtranslationDduration">400</integer> <!--default = 400-->
     <integer name="startOffset">80</integer><!--default = 80-->
     <integer name="Xtranslate">300</integer>
-    <integer name="hamburgerAnimationDuration">700</integer>
+    <integer name="hamburgerDuration">300</integer>
     <integer name="hamburgerMiddleLineScaleDuration">300</integer> <!-- =hamburgerDuration*2 -->
 </resources>
