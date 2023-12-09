@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FullApplication</string>
+    <string name="app_name">BetaServerApplication</string>
     <string name="primary_menu_home">HOME</string>
     <string name="primary_menu_settings">SETTINGS</string>
     <string name="primary_menu_about">ABOUT</string>

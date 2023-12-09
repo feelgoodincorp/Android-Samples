@@ -6,11 +6,11 @@
     <dimen name="secondLevelMarginRight">-100dp</dimen>
     <!--<dimen name="thirdLevelMarginRight">-20dp</dimen>-->
 
-    <dimen name="hamburgerWidth">50dp</dimen>
-    <dimen name="hamburgerHeight">50dp</dimen>
-
     <dimen name="hamburgerMarginLeft">15dp</dimen>
     <dimen name="hamburgerMarginBottom">15dp</dimen>
+
+    <dimen name="hamburgerWidth">40dp</dimen>
+    <dimen name="hamburgerHeight">40dp</dimen>
 
     <dimen name="firstMenuLevelLayoutWidth">120dp</dimen>
     <dimen name="firstMenuLevelLayoutHeight">50dp</dimen>
@@ -18,17 +18,12 @@
     <dimen name="secondMenuLevelLayoutWidth">100dp</dimen>
     <dimen name="secondMenuLevelLayoutHeight">50dp</dimen>
 
-    <!--    <dimen name="thirdMenuLevelLayoutWidth">100dp</dimen>
-        <dimen name="thirdMenuLevelLayoutHeight">50dp</dimen>-->
+<!--    <dimen name="thirdMenuLevelLayoutWidth">100dp</dimen>
+    <dimen name="thirdMenuLevelLayoutHeight">50dp</dimen>-->
+
 
     <dimen name="firstMenuLevelMarginBottom">65dp</dimen> <!-- =secondMargin+layoutHeight  -->
     <dimen name="secondMenuLevelMarginBottom">15dp</dimen>
     <!--<dimen name="thirdMenuLevelMarginBottom">50dp</dimen>-->
 
-    <!--        values for new hamburger       -->
-    <dimen name="hamburgerLinesWidth">36dp</dimen>
-    <dimen name="hamburgerLinesHeight">3.6dp</dimen> <!-- =hamburgerLinesWidth/10 -->
-    <dimen name="hamburgerUpperLineMarginTop">11dp</dimen>  <!-- = в пропорции 1:2:3(разница со сделующей линией постоянна) и -viewHeight/2 -->
-    <dimen name="hamburgerMiddleLineMarginTop">22dp</dimen>
-    <dimen name="hamburgerLowerLineMarginTop">33dp</dimen>
 </resources>
