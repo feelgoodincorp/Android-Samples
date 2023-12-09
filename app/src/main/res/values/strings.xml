@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ServerApplication</string>
+    <string name="menu_home">HOME</string>
+    <string name="menu_settings">SETTINGS</string>
+    <string name="menu_about">ABOUT</string>
+    <string name="menu_exit">QUIT</string>
+    <string name="secondary_menu_back">BACK</string>
+    <string name="secondary_menu_theme">THEME</string>
+    <string name="secondary_menu_chache">CACHE</string>
+    <string name="secondary_menu_account">ACCOUNT</string>
+    <string name="secondary_menu_log_in">LOG IN</string>
+    <string name="font">11692.otf</string>
+    <string name="typeOfContentForImageView">This is Content Images</string>
+    <string name="about_button_text">Created a long time ago in a galaxy far, far away....version 0.1
+        oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+        oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+        ooooooooooooooooo
+        o</string>
+</resources>

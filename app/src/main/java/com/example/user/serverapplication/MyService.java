@@ -32,7 +32,7 @@ public class MyService extends IntentService {
     public static String data = "this is loaded data";
     public static int count = 0;
     public static final String NOTIFICATION = "notification";
-    private byte[] a;
+
 
 
     public MyService() {
