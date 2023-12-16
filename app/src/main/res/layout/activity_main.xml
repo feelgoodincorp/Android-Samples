@@ -1,193 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/mainContainerRelativeLayout"
-    tools:context="com.example.user.mvptrying.MainActivity">
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
-    <!--строку с добавлением ресурса убрать,как только будут данные с сервера-->
-    <!--все что ниже contentContainerRelativeLayout - не засветляется анимацией меню-->
-    <!--не забыть про растягивание изображения-->
-    <ImageView
+    <!--выбирать контейнерр для контента(в данном случае
+     между framelayout и viewpager)-->
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/contentImageView"
-        android:src="@drawable/forest"
-        android:contentDescription="@string/typeOfContentForContentImageView">
-    </ImageView>
-    <RelativeLayout
+        android:id="@+id/content_frame"/>
+
+    <!--<android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/contentContainerRelativeLayout">
+        android:id="@+id/viewPager">
+    </android.support.v4.view.ViewPager>
+-->
 
-    </RelativeLayout>
 
-    <TextView
+    <!--можно выбрать между navview и listview реализацией шторки-->
+    <!--<android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textColor="@color/colorGreen"
-        android:background="@color/colorBlack"
-        android:id="@+id/metadataTextView"/>
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />-->
 
-    <!--запрос сразу right и end для версий ниже и выше 4.2-->
-    <Button
-        android:id="@+id/primary_menu_button_exit"
-        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
-        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
-        android:layout_marginRight="@dimen/firstLevelMarginRight"
-        android:layout_marginEnd="@dimen/firstLevelMarginRight"
-        android:layout_marginBottom="@dimen/firstMenuLevelMarginBottom"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:background="@color/fullAlpha"
-        android:gravity="end|center_vertical"
-        android:fontFamily="@string/font"
-        android:textStyle="bold"
-        android:text="@string/primary_menu_quit"
-        android:textSize="@dimen/menu_text_size"
-        />
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="#ffff"/>
 
-    <Button
-        android:id="@+id/primary_menu_button_about"
-        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
-        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
-        android:layout_above="@+id/primary_menu_button_exit"
-        android:layout_marginRight="@dimen/firstLevelMarginRight"
-        android:layout_marginEnd="@dimen/firstLevelMarginRight"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:background="@color/fullAlpha"
-        android:gravity="end|center_vertical"
-        android:fontFamily="@string/font"
-        android:text="@string/primary_menu_about"
-        android:textSize="@dimen/menu_text_size"
-        />
-
-    <Button
-        android:id="@+id/primary_menu_button_settings"
-        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
-        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
-        android:layout_above="@+id/primary_menu_button_about"
-        android:layout_marginRight="@dimen/firstLevelMarginRight"
-        android:layout_marginEnd="@dimen/firstLevelMarginRight"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:background="@color/fullAlpha"
-        android:gravity="end|center_vertical"
-        android:fontFamily="@string/font"
-        android:text="@string/primary_menu_settings"
-        android:textSize="@dimen/menu_text_size"
-        />
-
-    <Button
-        android:id="@+id/primary_menu_button_home"
-        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
-        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
-        android:layout_above="@+id/primary_menu_button_settings"
-        android:layout_marginRight="@dimen/firstLevelMarginRight"
-        android:layout_marginEnd="@dimen/firstLevelMarginRight"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:background="@color/fullAlpha"
-        android:gravity="end|center_vertical"
-        android:fontFamily="@string/font"
-        android:text="@string/primary_menu_home"
-        android:textSize="@dimen/menu_text_size"
-        />
-
-    <Button
-        android:id="@+id/secondary_menu_button_back"
-        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
-        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
-        android:background="@color/fullAlpha"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="@dimen/secondLevelMarginRight"
-        android:layout_marginRight="@dimen/secondLevelMarginRight"
-        android:layout_marginBottom="@dimen/secondMenuLevelMarginBottom"
-        android:gravity="end|center_vertical"
-        android:fontFamily="@string/font"
-        android:text="@string/secondary_menu_back"
-        android:textSize="@dimen/menu_text_size"
-        />
-
-    <Button
-        android:id="@+id/secondary_menu_button_account"
-        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
-        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_above="@id/secondary_menu_button_back"
-        android:layout_marginEnd="@dimen/secondLevelMarginRight"
-        android:layout_marginRight="@dimen/secondLevelMarginRight"
-        android:background="@color/fullAlpha"
-        android:gravity="end|center_vertical"
-        android:fontFamily="@string/font"
-        android:text="@string/secondary_menu_account"
-        android:textSize="@dimen/menu_text_size"
-        />
-
-    <Button
-        android:id="@+id/secondary_menu_button_cache"
-        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
-        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_above="@id/secondary_menu_button_account"
-        android:layout_marginEnd="@dimen/secondLevelMarginRight"
-        android:layout_marginRight="@dimen/secondLevelMarginRight"
-        android:background="@color/fullAlpha"
-        android:gravity="end|center_vertical"
-        android:fontFamily="@string/font"
-        android:text="@string/secondary_menu_cache"
-        android:textSize="@dimen/menu_text_size"/>
-
-    <Button
-        android:id="@+id/secondary_menu_button_menu_theme"
-        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
-        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_above="@id/secondary_menu_button_cache"
-        android:layout_marginEnd="@dimen/secondLevelMarginRight"
-        android:layout_marginRight="@dimen/secondLevelMarginRight"
-        android:background="@color/fullAlpha"
-        android:gravity="end|center_vertical"
-        android:fontFamily="@string/font"
-        android:text="@string/secondary_menu_theme"
-        android:textSize="@dimen/menu_text_size"/>
-
-    <Button
-        android:id="@+id/secondary_menu_button_log_in"
-        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
-        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_above="@id/secondary_menu_button_menu_theme"
-        android:layout_marginEnd="@dimen/secondLevelMarginRight"
-        android:layout_marginRight="@dimen/secondLevelMarginRight"
-        android:background="@color/fullAlpha"
-        android:gravity="end|center_vertical"
-        android:fontFamily="@string/font"
-        android:text="@string/secondary_menu_log_in"
-        android:textSize="@dimen/menu_text_size"/>
-
-    <ImageView
-        android:id="@+id/hamburgerImageView"
-        android:layout_width="@dimen/hamburgerWidth"
-        android:layout_height="@dimen/hamburgerHeight"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="@dimen/hamburgerMarginLeft"
-        android:layout_marginLeft="@dimen/hamburgerMarginLeft"
-        android:layout_marginBottom="@dimen/hamburgerMarginBottom"
-        app:srcCompat="@drawable/m_vector"
-        android:contentDescription="@string/typeOfContentForHamburgerImageView" />
-</RelativeLayout>
-
+</android.support.v4.widget.DrawerLayout>
