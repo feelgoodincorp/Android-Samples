@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--        values for hamburger       -->
+    <dimen name="hamburgerContainerWidth">85dp</dimen>
+    <dimen name="hamburgerContainerHeight">65dp</dimen>
+
+    <dimen name="hamburgerLinesWidth">36dp</dimen>
+    <dimen name="hamburgerLinesHeight">3.6dp</dimen> <!-- =hamburgerLinesWidth/10 -->
+
+    <!-- in proportion of 1:2:3 and -viewHeight/2 -->
+    <dimen name="hamburgerUpperLineMarginTop">11dp</dimen>
+    <dimen name="hamburgerMiddleLineMarginTop">22dp</dimen>
+    <dimen name="hamburgerLowerLineMarginTop">33dp</dimen>
+
+    <!--        values for menu lists       -->
+    <dimen name="primaryMenuButtonWidth">120dp</dimen>
+    <dimen name="primaryMenuButtonHeight">50dp</dimen>
+
+    <dimen name="secondaryMenuButtonWidth">120dp</dimen>
+    <dimen name="secondaryMenuButtonHeight">50dp</dimen>
+
+    <!-- used for hiding view in left outside of screen  |  = (-viewWidth) -->
+    <dimen name="primaryMenuMarginRight">-120dp</dimen>
+    <dimen name="secondaryMenuMarginRight">-120dp</dimen>
+
+    <dimen name="primaryMenuMarginBottom">65dp</dimen> <!-- may be calculated like =secondMargin+layoutHeight  -->
+    <dimen name="secondaryMenuMarginBottom">15dp</dimen>
+
+    <!-- default = 17DP(recomended in sp)-->
+    <dimen name="menu_text_size">20sp</dimen>
+
+    <!--        positions of menu columns       -->
+    <dimen name="primaryMenuClosed">0dp</dimen>
+    <dimen name="primaryMenuOpened">-140dp</dimen>
+    <dimen name="secondaryMenuOpened">-260dp</dimen>
+</resources>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">DemoApp</string>
+    <string name="primary_menu_home">HOME</string>
+    <string name="primary_menu_settings">SETTINGS</string>
+    <string name="primary_menu_about">ABOUT</string>
+    <string name="primary_menu_quit">QUIT</string>
+    <string name="secondary_menu_back">BACK</string>
+    <string name="secondary_menu_theme">THEME</string>
+    <string name="secondary_menu_cache">CACHE</string>
+    <string name="secondary_menu_account">ACCOUNT</string>
+    <string name="secondary_menu_log_in">LOG IN</string>
+    <string name="font">11692.otf</string>
+
+    <string name="contentImageView">This is Content Images</string>
+    <string name="hamburgerImageView">This is Hamburger Button</string>
+
+    <string name="URL">"http://192.168.1.2:8081/servletDemo/"</string>
+    <string-array name="supportedFormats">
+        <item>.jpg</item>
+        <item>.png</item>
+        <item>.bmp</item>
+        <item>.gif</item>
+    </string-array>
+</resources>
