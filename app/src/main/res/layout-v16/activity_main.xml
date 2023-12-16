@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--добавлена api16 активность, чтоб работать с кастомными шрифтами-->
+
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -15,7 +18,7 @@
             android:background="@drawable/forest"
             android:scaleType="centerCrop"
             android:id="@+id/contentImageView"
-            android:contentDescription="@string/contentImageView" />
+            android:contentDescription="@string/contentImageView"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -36,7 +39,7 @@
             android:layout_alignParentBottom="true"
             android:background="@color/fullAlpha"
             android:gravity="end|center_vertical"
-            android:typeface="monospace"
+            android:fontFamily="@string/font"
             android:textStyle="bold"
             android:text="@string/primary_menu_quit"
             android:textSize="@dimen/menu_text_size"
@@ -53,7 +56,7 @@
             android:layout_above="@+id/primary_menu_button_exit"
             android:background="@color/fullAlpha"
             android:gravity="end|center_vertical"
-            android:typeface="monospace"
+            android:fontFamily="@string/font"
             android:text="@string/primary_menu_about"
             android:textSize="@dimen/menu_text_size"
             />
@@ -69,7 +72,7 @@
             android:layout_above="@+id/primary_menu_button_about"
             android:background="@color/fullAlpha"
             android:gravity="end|center_vertical"
-            android:typeface="monospace"
+            android:fontFamily="@string/font"
             android:text="@string/primary_menu_settings"
             android:textSize="@dimen/menu_text_size"
             />
@@ -85,7 +88,7 @@
             android:layout_above="@+id/primary_menu_button_settings"
             android:background="@color/fullAlpha"
             android:gravity="end|center_vertical"
-            android:typeface="monospace"
+            android:fontFamily="@string/font"
             android:text="@string/primary_menu_home"
             android:textSize="@dimen/menu_text_size"
             />
@@ -102,7 +105,7 @@
             android:layout_alignParentBottom="true"
             android:background="@color/fullAlpha"
             android:gravity="end|center_vertical"
-            android:typeface="monospace"
+            android:fontFamily="@string/font"
             android:text="@string/secondary_menu_back"
             android:textSize="@dimen/menu_text_size"
             />
@@ -118,7 +121,7 @@
             android:layout_above="@id/secondary_menu_button_back"
             android:background="@color/fullAlpha"
             android:gravity="end|center_vertical"
-            android:typeface="monospace"
+            android:fontFamily="@string/font"
             android:text="@string/secondary_menu_account"
             android:textSize="@dimen/menu_text_size"
             />
@@ -134,7 +137,7 @@
             android:layout_above="@id/secondary_menu_button_account"
             android:background="@color/fullAlpha"
             android:gravity="end|center_vertical"
-            android:typeface="monospace"
+            android:fontFamily="@string/font"
             android:text="@string/secondary_menu_cache"
             android:textSize="@dimen/menu_text_size"/>
 
@@ -149,7 +152,7 @@
             android:layout_above="@id/secondary_menu_button_cache"
             android:background="@color/fullAlpha"
             android:gravity="end|center_vertical"
-            android:typeface="monospace"
+            android:fontFamily="@string/font"
             android:text="@string/secondary_menu_theme"
             android:textSize="@dimen/menu_text_size"/>
 
@@ -164,7 +167,7 @@
             android:layout_above="@id/secondary_menu_button_menu_theme"
             android:background="@color/fullAlpha"
             android:gravity="end|center_vertical"
-            android:typeface="monospace"
+            android:fontFamily="@string/font"
             android:text="@string/secondary_menu_log_in"
             android:textSize="@dimen/menu_text_size"/>
 
@@ -182,7 +185,7 @@
                 android:layout_height="@dimen/hamburgerLinesHeight"
                 android:layout_marginTop="@dimen/hamburgerUpperLineMarginTop"
                 android:layout_gravity="center_horizontal"
-                app:srcCompat="@drawable/hamburger_line"
+                android:background="@drawable/hamburger_line"
                 android:contentDescription="@string/hamburgerImageView"
                 />
             <ImageView
@@ -191,7 +194,7 @@
                 android:layout_height="@dimen/hamburgerLinesHeight"
                 android:layout_marginTop="@dimen/hamburgerMiddleLineMarginTop"
                 android:layout_gravity="center_horizontal"
-                app:srcCompat="@drawable/hamburger_line"
+                android:background="@drawable/hamburger_line"
                 android:contentDescription="@string/hamburgerImageView"
                 />
             <ImageView
@@ -200,8 +203,16 @@
                 android:layout_height="@dimen/hamburgerLinesHeight"
                 android:layout_marginTop="@dimen/hamburgerLowerLineMarginTop"
                 android:layout_gravity="center_horizontal"
-                app:srcCompat="@drawable/hamburger_line"
-                android:contentDescription="@string/hamburgerImageView" />
+                android:background="@color/fullAlpha"
+                android:contentDescription="@string/hamburgerImageView"
+                />
+            <!--app:srcCompat="@drawable/hamburger_line"-->
+            <View
+                android:layout_width="@dimen/hamburgerLinesWidth"
+                android:layout_height="@dimen/hamburgerLinesWidth"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="77.5dp"
+                android:background="@color/PartialAlpha" />
 
         </FrameLayout>
         <TextView
