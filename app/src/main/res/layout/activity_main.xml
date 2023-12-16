@@ -2,45 +2,43 @@
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    android:id="@+id/drawer_layout"
+    tools:context="com.example.user.restart2.MainActivity">
 
-    <!--выбирать контейнерр для контента(в данном случае
-     между framelayout и viewpager)-->
-    <FrameLayout
+    <!--<FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/content_frame"/>
+        android:id="@+id/content">
+        
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pager"/>
 
-    <!--<android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/viewPager">
-    </android.support.v4.view.ViewPager>
+        <fragment
+            android:id="@+id/fragment_explist"
+            android:name="com.example.user.restart2.SecondFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            tools:layout="@layout/frgments_container" />
+    </FrameLayout>
 -->
+<!--TODO-->
+<android.support.v4.view.ViewPager
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/pager"/>
 
-
-    <!--можно выбрать между navview и listview реализацией шторки-->
-    <!--<android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nvView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />-->
-
-    <ListView
-        android:id="@+id/left_drawer"
-        android:layout_width="240dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:choiceMode="singleChoice"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0dp"
-        android:background="#ffff"/>
+        android:background="@android:color/white"
+        app:menu="@menu/menu" />
 
 </android.support.v4.widget.DrawerLayout>
