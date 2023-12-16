@@ -4,18 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.imageresizing.MainActivity">
-
+    android:id="@+id/rel_layout"
+    tools:context="com.example.user.in_visiblealgorithm.MainActivity">
 
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/imageView"/>
+        android:id="@+id/web_view"
+        android:layout_above="@+id/play_button"
+        ></ImageView>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/play_button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"/>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom"
+        android:text="Play"
+        android:textSize="35dp" />
+    <Button
+        android:id="@+id/exit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom"
+        android:textSize="35dp"
+        android:text="Exit"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rel_layout2">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="like it"
+            android:textColor="@color/colorPrimary"/>
+
+
+
+    </RelativeLayout>
+
+
+
 
 </RelativeLayout>
