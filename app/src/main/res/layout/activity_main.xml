@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.testanimation.MainActivity">
+    tools:context="com.example.user.statemachinetrying.MainActivity">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:text="Hello World!"
-        android:id="@+id/textview1"/>
+        android:text="state 1"
+        android:id="@+id/button1"
+       />
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textSize="30dp"
-        android:layout_below="@id/textview1"
-        android:id="@+id/textview2"/>
+        android:text="state 2"
+        android:id="@+id/button2"
+        android:layout_below="@id/button1"
+        />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/metadata"
-        android:layout_alignParentBottom="true"/>
-
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/viewWidth"
+        android:layout_height="@dimen/viewHeigth"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/button2"
+        android:layout_marginRight="@dimen/negativeViewWidth"
+        android:layout_marginEnd="@dimen/negativeViewWidth"
+        android:src="@drawable/ic_launcher_background"
+        android:gravity="end|center_vertical"/>
 
 
 </RelativeLayout>
