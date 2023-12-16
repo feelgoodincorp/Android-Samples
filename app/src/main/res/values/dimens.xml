@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="viewWidth">60dp</dimen>
+    <dimen name="viewHeigth">60dp</dimen>
+    <dimen name="negativeViewWidth">-60dp</dimen>
+</resources>
