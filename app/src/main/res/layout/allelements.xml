@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/forest"
+        android:scaleType="fitXY"
+        android:id="@+id/imageView"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/root_layout"
+        android:animateLayoutChanges="true">
+        <include layout="@layout/scene1"></include>
+        <include layout="@layout/scene2_notext"></include>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
