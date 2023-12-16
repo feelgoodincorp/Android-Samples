@@ -4,56 +4,190 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/rel_layout"
-    tools:context="com.example.user.in_visiblealgorithm.MainActivity">
+    android:id="@+id/mainContainerRelativeLayout"
+    tools:context="com.example.user.mvptrying.MainActivity">
 
-
+    <!--строку с добавлением ресурса убрать,как только будут данные с сервера-->
+    <!--все что ниже contentContainerRelativeLayout - не засветляется анимацией меню-->
+    <!--не забыть про растягивание изображения-->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/web_view"
-        android:layout_above="@+id/play_button"
-        ></ImageView>
-
-    <Button
-        android:id="@+id/play_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="bottom"
-        android:text="Play"
-        android:textSize="35dp" />
-    <Button
-        android:id="@+id/exit_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="bottom"
-        android:textSize="35dp"
-        android:text="Exit"/>
-
+        android:id="@+id/contentImageView"
+        android:src="@drawable/forest"
+        android:contentDescription="@string/typeOfContentForContentImageView">
+    </ImageView>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/rel_layout2">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="like it"
-            android:textColor="@color/colorPrimary"/>
-
-
+        android:id="@+id/contentContainerRelativeLayout">
 
     </RelativeLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textColor="@color/colorGreen"
+        android:background="@color/colorBlack"
+        android:id="@+id/metadataTextView"/>
 
+    <!--запрос сразу right и end для версий ниже и выше 4.2-->
+    <Button
+        android:id="@+id/primary_menu_button_exit"
+        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
+        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
+        android:layout_marginRight="@dimen/firstLevelMarginRight"
+        android:layout_marginEnd="@dimen/firstLevelMarginRight"
+        android:layout_marginBottom="@dimen/firstMenuLevelMarginBottom"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/fullAlpha"
+        android:gravity="end|center_vertical"
+        android:fontFamily="@string/font"
+        android:textStyle="bold"
+        android:text="@string/primary_menu_quit"
+        android:textSize="@dimen/menu_text_size"
+        />
 
+    <Button
+        android:id="@+id/primary_menu_button_about"
+        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
+        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
+        android:layout_above="@+id/primary_menu_button_exit"
+        android:layout_marginRight="@dimen/firstLevelMarginRight"
+        android:layout_marginEnd="@dimen/firstLevelMarginRight"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/fullAlpha"
+        android:gravity="end|center_vertical"
+        android:fontFamily="@string/font"
+        android:text="@string/primary_menu_about"
+        android:textSize="@dimen/menu_text_size"
+        />
 
+    <Button
+        android:id="@+id/primary_menu_button_settings"
+        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
+        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
+        android:layout_above="@+id/primary_menu_button_about"
+        android:layout_marginRight="@dimen/firstLevelMarginRight"
+        android:layout_marginEnd="@dimen/firstLevelMarginRight"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/fullAlpha"
+        android:gravity="end|center_vertical"
+        android:fontFamily="@string/font"
+        android:text="@string/primary_menu_settings"
+        android:textSize="@dimen/menu_text_size"
+        />
+
+    <Button
+        android:id="@+id/primary_menu_button_home"
+        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
+        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
+        android:layout_above="@+id/primary_menu_button_settings"
+        android:layout_marginRight="@dimen/firstLevelMarginRight"
+        android:layout_marginEnd="@dimen/firstLevelMarginRight"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/fullAlpha"
+        android:gravity="end|center_vertical"
+        android:fontFamily="@string/font"
+        android:text="@string/primary_menu_home"
+        android:textSize="@dimen/menu_text_size"
+        />
+
+    <Button
+        android:id="@+id/secondary_menu_button_back"
+        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
+        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
+        android:background="@color/fullAlpha"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/secondLevelMarginRight"
+        android:layout_marginRight="@dimen/secondLevelMarginRight"
+        android:layout_marginBottom="@dimen/secondMenuLevelMarginBottom"
+        android:gravity="end|center_vertical"
+        android:fontFamily="@string/font"
+        android:text="@string/secondary_menu_back"
+        android:textSize="@dimen/menu_text_size"
+        />
+
+    <Button
+        android:id="@+id/secondary_menu_button_account"
+        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
+        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/secondary_menu_button_back"
+        android:layout_marginEnd="@dimen/secondLevelMarginRight"
+        android:layout_marginRight="@dimen/secondLevelMarginRight"
+        android:background="@color/fullAlpha"
+        android:gravity="end|center_vertical"
+        android:fontFamily="@string/font"
+        android:text="@string/secondary_menu_account"
+        android:textSize="@dimen/menu_text_size"
+        />
+
+    <Button
+        android:id="@+id/secondary_menu_button_cache"
+        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
+        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/secondary_menu_button_account"
+        android:layout_marginEnd="@dimen/secondLevelMarginRight"
+        android:layout_marginRight="@dimen/secondLevelMarginRight"
+        android:background="@color/fullAlpha"
+        android:gravity="end|center_vertical"
+        android:fontFamily="@string/font"
+        android:text="@string/secondary_menu_cache"
+        android:textSize="@dimen/menu_text_size"/>
+
+    <Button
+        android:id="@+id/secondary_menu_button_menu_theme"
+        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
+        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/secondary_menu_button_cache"
+        android:layout_marginEnd="@dimen/secondLevelMarginRight"
+        android:layout_marginRight="@dimen/secondLevelMarginRight"
+        android:background="@color/fullAlpha"
+        android:gravity="end|center_vertical"
+        android:fontFamily="@string/font"
+        android:text="@string/secondary_menu_theme"
+        android:textSize="@dimen/menu_text_size"/>
+
+    <Button
+        android:id="@+id/secondary_menu_button_log_in"
+        android:layout_width="@dimen/firstMenuLevelLayoutWidth"
+        android:layout_height="@dimen/firstMenuLevelLayoutHeight"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/secondary_menu_button_menu_theme"
+        android:layout_marginEnd="@dimen/secondLevelMarginRight"
+        android:layout_marginRight="@dimen/secondLevelMarginRight"
+        android:background="@color/fullAlpha"
+        android:gravity="end|center_vertical"
+        android:fontFamily="@string/font"
+        android:text="@string/secondary_menu_log_in"
+        android:textSize="@dimen/menu_text_size"/>
+
+    <ImageView
+        android:id="@+id/hamburgerImageView"
+        android:layout_width="@dimen/hamburgerWidth"
+        android:layout_height="@dimen/hamburgerHeight"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/hamburgerMarginLeft"
+        android:layout_marginLeft="@dimen/hamburgerMarginLeft"
+        android:layout_marginBottom="@dimen/hamburgerMarginBottom"
+        app:srcCompat="@drawable/m_vector"
+        android:contentDescription="@string/typeOfContentForHamburgerImageView" />
 </RelativeLayout>
+

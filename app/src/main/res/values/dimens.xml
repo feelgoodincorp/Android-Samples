@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menu_item_margin_right">20dp</dimen>
+    <dimen name="menu_text_size">20sp</dimen> <!-- default = 17DP(специально запрашивает sp)-->
+    <dimen name="firstLevelMarginRight">-120dp</dimen><!-- =-layoutWidth  -->
+    <dimen name="secondLevelMarginRight">-100dp</dimen>
+    <!--<dimen name="thirdLevelMarginRight">-20dp</dimen>-->
+
+    <dimen name="hamburgerMarginLeft">15dp</dimen>
+    <dimen name="hamburgerMarginBottom">15dp</dimen>
+
+    <dimen name="hamburgerWidth">40dp</dimen>
+    <dimen name="hamburgerHeight">40dp</dimen>
+
+    <dimen name="firstMenuLevelLayoutWidth">120dp</dimen>
+    <dimen name="firstMenuLevelLayoutHeight">50dp</dimen>
+
+    <dimen name="secondMenuLevelLayoutWidth">100dp</dimen>
+    <dimen name="secondMenuLevelLayoutHeight">50dp</dimen>
+
+<!--    <dimen name="thirdMenuLevelLayoutWidth">100dp</dimen>
+    <dimen name="thirdMenuLevelLayoutHeight">50dp</dimen>-->
+
+
+    <dimen name="firstMenuLevelMarginBottom">65dp</dimen> <!-- =secondMargin+layoutHeight  -->
+    <dimen name="secondMenuLevelMarginBottom">15dp</dimen>
+    <!--<dimen name="thirdMenuLevelMarginBottom">50dp</dimen>-->
+
+</resources>
